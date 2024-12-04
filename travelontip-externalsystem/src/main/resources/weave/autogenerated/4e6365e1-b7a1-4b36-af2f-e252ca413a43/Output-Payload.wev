@@ -1,0 +1,4 @@
+%dw 2.0
+
+type auto_4e6365e1_b7a1_4b36_af2f_e252ca413a43_Output_Payload = Array<{|  RouteId: Number,   OriginalLocation?: String,   DestinationLocation?: String,   CompanyName?: String|}>
+
