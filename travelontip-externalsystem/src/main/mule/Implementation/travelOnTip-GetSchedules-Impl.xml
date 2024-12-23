@@ -7,11 +7,8 @@
 	xsi:schemaLocation="
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd 
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
-	<db:config name="Database_Config" doc:name="Database Config" doc:id="8b32600a-8470-49a0-8ef2-2699b6fa566f" >
-		<db:my-sql-connection host="localhost" port="3306" user="root" password="anusha" database="hbt" />
-	</db:config>
 	<sub-flow name="travelOnTip-GetSchedules-ImplSub_Flow" doc:id="6ee1baf0-9caf-4af3-903b-0bd5b9f67c73">
-	<db:select doc:name="Select schedules from TravelOnTip System" doc:id="7ce357d3-a131-4f9c-9716-137cf140d0bf" config-ref="Database_Config">
+	<db:select doc:name="Select schedules from TravelOnTip System" doc:id="7ce357d3-a131-4f9c-9716-137cf140d0bf" config-ref="Db_Config">
 			<db:sql ><![CDATA[SELECT * FROM Schedules where CompanyName = 'TravelOnTip']]></db:sql>
 
 		</db:select>
